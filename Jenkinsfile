@@ -2,13 +2,20 @@ pipeline {
     agent any
 
     stages {
+        
+      stage('Check out') {
+          steps {
+              echo "Checking Bitbucket"
+              git credentialsId: 'Github_CredentialID', url: 'https://github.com/MahendraNathReddy446/Sample_Gradle_Build'
+         }
+      } 
       stage('Gradle Build') {
-        if (isUnix()) {
-           sh './gradlew clean build'
-           } 
-           else {
+          if (isUnix()) {
+             sh './gradlew clean build'
+          } 
+          else {
              bat 'gradlew.bat clean build'
-           }
+        }
         }
     }
  } 
