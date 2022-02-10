@@ -9,15 +9,10 @@ pipeline {
               git credentialsId: 'Github_CredentialID', url: 'https://github.com/MahendraNathReddy446/Sample_Gradle_Build.git'
          }
       } 
-      /*stage('Gradle Build') {
+      stage('Gradle Build') {
           steps {
-          if (isUnix()) {
              sh './gradlew clean build'
-           } 
-          else {
-             bat 'gradlew.bat clean build'
-           }
-          }
-	}*/
+			 }
+         }
     }
- }
+} 
