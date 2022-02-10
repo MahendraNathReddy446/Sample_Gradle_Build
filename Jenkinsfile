@@ -11,8 +11,9 @@ pipeline {
       } 
       stage('Gradle Build') {
           steps {
+	     echo 'Testing Gradle'
              sh './gradlew build'
-			 }
-         }
+	  }
+       }
     }
 } 
