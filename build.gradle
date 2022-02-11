@@ -1,5 +1,5 @@
-task myTask {
-   doLast {
-      println'Welcome to gradle_test'
-   }
+tasks.register('hello') {
+    doLast {
+        println 'Hello world!'
+    }
 }
