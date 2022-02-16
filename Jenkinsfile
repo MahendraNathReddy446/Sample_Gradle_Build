@@ -10,8 +10,10 @@ pipeline {
          }
       } 
       stage('Gradle Build') {
-          tasks.register('hello') {
-      doLast {
+          task copy(type: Copy, group: "Custom", description: "The sources are copied to dest directory") {  
+          from "src"  
+          into "dest"  
+           }  
           println 'hello'
        }
       }
