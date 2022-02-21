@@ -10,11 +10,13 @@ pipeline {
          }
       } 
       stage('Gradle Build') {
-          task copy(type: Copy, group: "Custom", description: "The sources are copied to dest directory") {  
-          from "src"  
-          into "dest"  
-           }  
-          println 'hello'
+	      steps {
+             task copy(type: Copy, group: "Custom", description: "The sources are copied to dest directory") {  
+             from "src"  
+             into "dest"
+             println 'hello'			 
+          }  
+        }
       }
     }
 }
