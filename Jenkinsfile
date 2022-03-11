@@ -11,10 +11,9 @@ pipeline {
       } 
       stage('Gradle Build') {
 	  steps {
-             
+            
              println 'hello'			 
           }  
         }
-      }
     }
 }
