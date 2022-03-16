@@ -11,7 +11,7 @@ pipeline {
       } 
       stage('Gradle Build') {
 	  steps {
-             gradle –q hello
+             sh 'gradle –q hello'
              println 'hello'			 
           }  
         }
