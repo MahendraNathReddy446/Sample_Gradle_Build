@@ -11,11 +11,11 @@ pipeline {
       } 
 	  stage('Compile') { // Compile and do unit testing
       tools {
-        gradle 'gradle4'
+        //gradle 'gradle4'
       }
       steps {
         // run Gradle to execute compile and unit testing
-        sh 'gradle clean compileJava test'
+        //sh 'gradle clean compileJava test'
       }
       /*stage('Gradle Build') {
 	  steps {
