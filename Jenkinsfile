@@ -5,7 +5,7 @@ pipeline {
 	
     stage("Checkout code") {
             steps {
-                git credentialsId: 'BitBucket_credentials', url: 'https://mahendranathreddypalle@bitbucket.org/pragiti-git/devops/src/master/sap-commerce/.git'
+                git credentialsId: 'Github_CredentialID', url: 'https://github.com/MahendraNathReddy446/Sample_Gradle_Build.git'
             }
     }
 	stage('Compile') {
